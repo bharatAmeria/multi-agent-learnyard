@@ -16,3 +16,10 @@ memory/*
 generated_projects/*
 src/generated_projects/*
 diagrams/*
+.DS_Store
+.python-version
+SETUP.md
+flow.txt
+requirements.txt
+src/.DS_Store
+uv.lock
