@@ -1,0 +1,25 @@
+[project]
+name = "project-2"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "anthropic>=0.40.0",
+    "langgraph>=0.2.0",
+    "langsmith>=0.1.0",
+    "openai>=2.44.0",
+    "pydantic>=2.8.0",
+    "pytest>=8.0.0",
+    "python-dotenv>=1.0.0",
+    "streamlit>=1.38.0",
+    "structlog>=26.1.0",
+]
+
+[tool.pytest.ini_options]
+# Scope collection to the real test suite. Without this, plain `pytest` /
+# `uv run pytest` from the project root also tries to collect test files
+# inside generated_projects/<run>/tests/ (the app's own output folder where
+# it writes generated projects) and fails, since those generated projects
+# aren't installed packages and don't share this project's dependencies.
+testpaths = ["src/tests"]
